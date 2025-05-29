@@ -1,0 +1,115 @@
+/* Reset & base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #8545ca 0%, #2575fc 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 400px;
+    max-width: 90%;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #4b3ca7;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    min-height: 70px;
+    color: #222;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.options li {
+    margin-bottom: 15px;
+}
+
+.options li label {
+    display: block;
+    background: #f0f0f0;
+    padding: 14px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    user-select: none;
+}
+
+.options li label:hover {
+    background-color: #dbe4ff;
+    box-shadow: 0 0 10px #a3bffa;
+}
+
+.options li input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Highlight selected option */
+.options li input[type="radio"]:checked + span,
+.options li input[type="radio"]:checked + label {
+    background-color: #4b3ca7;
+    color: white;
+    border-color: #3a2e87;
+}
+
+/* Next button */
+#next {
+    background-color: #4b3ca7;
+    color: #fff;
+    border: none;
+    padding: 14px 35px;
+    font-size: 17px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(75, 60, 167, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#next:hover {
+    background-color: #3a2e87;
+    box-shadow: 0 8px 20px rgba(58, 46, 135, 0.6);
+}
+
+#next:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Score */
+.score {
+    font-size: 26px;
+    font-weight: 700;
+    color: #4b3ca7;
+    margin-top: 20px;
+}
